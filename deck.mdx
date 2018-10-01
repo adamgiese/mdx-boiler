@@ -1,0 +1,28 @@
+export { default as theme } from './theme.js'
+import { Head } from 'mdx-deck'
+
+<Head>
+  <title>Talk name</title>
+</Head>
+
+# Hi
+
+---
+
+```js
+import { pipe, split, map, match, head, applySpec, join } from 'ramda';
+
+const parseShorthand = pipe(
+  split('.'),
+  map(
+    applySpec({
+      name: pipe(match(/[A-G](b|#)?/), head),
+      octave: pipe(match(/[0-9]/), join(''), parseInt),
+    })
+  )
+);
+```
+
+---
+
+## Questions?
